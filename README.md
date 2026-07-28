@@ -1,6 +1,10 @@
-# Ikny Stock Screen Overlay
+# (Ikny) Stock Screen Overlay
 
 네이버 금융이나 Google Finance에서 보고 있는 주식 화면 위에 자동 분석 패널을 띄우는 Chrome/Edge 확장 프로그램입니다. 종목 코드를 따로 입력하지 않아도 현재 페이지의 종목을 감지하고, 매수/매도 의견을 0~100점으로 보여줍니다.
+
+I Know, Now You Know (Ikny)
+
+* 복잡한 주식 데이터를 분석해, 이제는 사용자도 시장의 흐름을 알 수 있게 해준다는 의미로 지었습니다.
 
 ## Demo
 
