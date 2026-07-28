@@ -1,0 +1,336 @@
+#ikny-overlay {
+  all: initial;
+  position: fixed;
+  top: 88px;
+  right: 24px;
+  z-index: 2147483647;
+  width: 330px;
+  min-width: 300px;
+  max-width: min(520px, calc(100vw - 24px));
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  resize: both;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 8px;
+  background: #07111f;
+  color: #e5edf7;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+#ikny-overlay * {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+#ikny-overlay .ikny-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #0f172a;
+  cursor: move;
+  user-select: none;
+}
+
+#ikny-overlay .ikny-header strong {
+  display: block;
+  color: #f8fafc;
+  font-size: 15px;
+}
+
+#ikny-overlay #ikny-source {
+  display: block;
+  color: #93c5fd;
+  font-size: 11px;
+  margin-top: 1px;
+}
+
+#ikny-overlay .ikny-actions {
+  display: flex;
+  gap: 6px;
+}
+
+#ikny-overlay button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 6px;
+  background: #111827;
+  color: #e5edf7;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+#ikny-overlay .ikny-scan-button {
+  width: 100%;
+  height: 34px;
+  margin-top: 10px;
+  border-color: rgba(239, 68, 68, 0.35);
+  background: #172033;
+  color: #f8fafc;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+#ikny-overlay button:hover {
+  background: #1f2937;
+}
+
+#ikny-overlay .ikny-body {
+  padding: 12px;
+  max-height: calc(100vh - 120px);
+  overflow: auto;
+}
+
+#ikny-overlay.ikny-minimized .ikny-body {
+  display: none;
+}
+
+#ikny-overlay .ikny-status,
+#ikny-overlay .ikny-error,
+#ikny-overlay p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+#ikny-overlay .ikny-error {
+  color: #fca5a5;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+#ikny-overlay .ikny-quote {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+#ikny-overlay .ikny-name {
+  display: block;
+  max-width: 210px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+#ikny-overlay .ikny-quote strong {
+  display: block;
+  margin-top: 2px;
+  color: #f8fafc;
+  font-size: 22px;
+}
+
+#ikny-overlay .ikny-up {
+  color: #ef4444;
+  font-weight: 800;
+}
+
+#ikny-overlay .ikny-down {
+  color: #3b82f6;
+  font-weight: 800;
+}
+
+#ikny-overlay .ikny-signal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 9px 10px;
+  border-radius: 7px;
+  background: #111827;
+}
+
+#ikny-overlay .ikny-signal span {
+  display: block;
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+#ikny-overlay .ikny-signal small {
+  display: block;
+  margin-top: 2px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+#ikny-overlay .ikny-signal b {
+  color: #cbd5e1;
+  font-size: 20px;
+}
+
+#ikny-overlay .ikny-buy {
+  border-left: 4px solid #ef4444;
+}
+
+#ikny-overlay .ikny-sell {
+  border-left: 4px solid #3b82f6;
+}
+
+#ikny-overlay .ikny-hold {
+  border-left: 4px solid #f59e0b;
+}
+
+#ikny-overlay .ikny-meter {
+  height: 7px;
+  margin: 9px 0 4px;
+  border-radius: 999px;
+  background: #1f2937;
+  overflow: hidden;
+}
+
+#ikny-overlay .ikny-meter span {
+  display: block;
+  height: 100%;
+  background: #f59e0b;
+}
+
+#ikny-overlay .ikny-meter-buy span {
+  background: #ef4444;
+}
+
+#ikny-overlay .ikny-meter-sell span {
+  background: #3b82f6;
+}
+
+#ikny-overlay .ikny-score-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: #64748b;
+  font-size: 10px;
+}
+
+#ikny-overlay .ikny-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 10px;
+  padding: 10px;
+  border-radius: 7px;
+  background: #0b1220;
+}
+
+#ikny-overlay .ikny-grid span,
+#ikny-overlay .ikny-plan span {
+  color: #94a3b8;
+}
+
+#ikny-overlay .ikny-grid b,
+#ikny-overlay .ikny-plan b {
+  color: #f8fafc;
+}
+
+#ikny-overlay .ikny-plan {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+#ikny-overlay .ikny-plan div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+#ikny-overlay .ikny-reasons {
+  margin-top: 10px;
+  color: #cbd5e1;
+}
+
+#ikny-overlay .ikny-reasons b {
+  color: #f8fafc;
+}
+
+#ikny-overlay .ikny-ai-line {
+  margin-top: 8px;
+  padding: 8px 9px;
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 7px;
+  background: rgba(14, 165, 233, 0.08);
+  color: #dbeafe;
+}
+
+#ikny-overlay .ikny-ai-line b {
+  color: #7dd3fc;
+}
+
+#ikny-overlay footer {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+#ikny-overlay .ikny-scan-box {
+  margin-top: 10px;
+  padding: 9px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 7px;
+  background: #0b1220;
+}
+
+#ikny-overlay .ikny-scan-box p {
+  margin-top: 7px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+#ikny-overlay .ikny-scan-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+  color: #f8fafc;
+}
+
+#ikny-overlay .ikny-scan-title button {
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+}
+
+#ikny-overlay .ikny-scan-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px;
+  align-items: center;
+  padding: 7px 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.14);
+  color: #e5edf7;
+  text-decoration: none;
+}
+
+#ikny-overlay .ikny-scan-item strong,
+#ikny-overlay .ikny-scan-item small {
+  display: block;
+}
+
+#ikny-overlay .ikny-scan-item strong {
+  color: #f8fafc;
+  font-size: 12px;
+}
+
+#ikny-overlay .ikny-scan-item small {
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+#ikny-overlay .ikny-scan-item b {
+  color: #fca5a5;
+}
+
+#ikny-overlay .ikny-scan-item em {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 11px;
+}

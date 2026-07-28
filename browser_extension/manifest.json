@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Ikny Stock Screen Overlay",
+  "version": "0.4.4",
+  "description": "Shows an automatic stock analysis overlay on Naver Finance and Google Finance pages.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://query1.finance.yahoo.com/*",
+    "https://query2.finance.yahoo.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://finance.naver.com/*",
+        "https://m.stock.naver.com/*",
+        "https://www.google.com/finance/*"
+      ],
+      "js": ["content.js"],
+      "css": ["overlay.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
