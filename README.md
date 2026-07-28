@@ -2,9 +2,16 @@
 
 네이버 금융이나 Google Finance에서 보고 있는 주식 화면 위에 자동 분석 패널을 띄우는 Chrome/Edge 확장 프로그램입니다. 종목 코드를 따로 입력하지 않아도 현재 페이지의 종목을 감지하고, 매수/매도 의견을 0~100점으로 보여줍니다.
 
-![Ikny overlay demo](docs/images/ikny-overlay-demo.png)
+## Demo
 
-> 데모 이미지는 `docs/images/ikny-overlay-demo.png` 경로에 두면 README에서 바로 표시됩니다.
+### Naver Finance
+
+![Ikny Naver Finance overlay demo](docs/images/naver-overlay-demo.png)
+
+### Google Finance
+
+![Ikny Google Finance overlay demo](docs/images/google-overlay-demo.png)
+
 
 ## 주요 기능
 
